@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #cccccc;  
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./faded-morrowind-min.jpg"); /*image used*/
+  background-color: #0C0B07; /* Used if the image is unavailable */
+  height: 500px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+#root {
+	width:90%;
+	max-width:400px;
+}
+
+.title {
+	letter-spacing:4px; /*stretch out title*/
+  	font-size: calc(12px + 1.8vmin); /*slight scaling based one screen size*/
+}
+
+/*Css for main screen*/
+#pause-menu {
+	border: 5px solid black; /*solid black border*/
+	border-radius:10px; /*round pause menu corners*/
+    box-shadow: 0 0 0 .5px white, 0 0 6px 2px black inset; /*adds white outline, softens border*/
+	background-color: rgb(13, 13, 13, .3); /*slight transparent inner*/
+	font-size: 20px;
+	letter-spacing: 4px; /*stretch out text*/
+	padding-top:10px;
+	padding-bottom:10px;
+	height:270px; /*set height for transitions*/
+	transition: height 250ms;
+}
+
+.center {
+	display: flex; /*center align*/
+	flex-direction: column; /*center align*/
+	align-items: center; /*center align*/
+	justify-content: center; /*center align*/
+	transition-property:all;
+	transition-duration:800ms;
+}
+
+/*CSS for current hover, abs useless on mobile*/
+.selector:hover {
+	border: 1px solid white; /*inner hard-line white border*/
+	border-radius:20px;  /*round*/
+	width:90%;  /*for smaller screens*/
+	max-width:250px;  /*max to avoid ugly*/
+	padding:3px; 
+	padding-bottom:6px;
+  box-shadow: 0 0 5px 4px gray inset, 0 0 3pt 2pt gray;  /*glow effect*/
+  background-color: #1c1c1c;  /*slight highlight*/
+  cursor:pointer; /*hover on desktop/mouse*/
+  margin:8px; /*space*/
+  height:38px;
+}
+
+/*CSS to preserve height*/
+.selector {
+	border: 1px solid rgb(13, 13, 13, .1); /*keeps div from stretching on hover*/
+	padding:3px; /*keeps div from stretching on hover*/
+	padding-bottom:6px; /*keeps div from stretching on hover*/
+  margin:8px; /*keeps div from stretching on hover*/
+  height:38px;    
+  transition-duration: 800ms;
+  transition-property: height, opacity, visibility;
+}
+
+.fadeInOut {
+    transition-duration: 800ms;
+    transition-property: height, opacity, visibility;
+}
+
+.fadeInOut.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition-duration: 800ms;
+    transition-property: height, opacity, visibility;
+    height: 0px;
+}
+
+.current {	
+	display: block; /*center align*/
+	flex-direction: row; /*center align*/
+	align-items: flex-start; /*vertical align*/
+	justify-content: center; /*hoirzontal align*/
+	transition-property: all;
+	transition-duration:800ms;
+}
+
+.content {
+	margin-top:5px;
+	font-size: 16px;
+}
+
+#back-button {
+  font-size: 12px;
+  text-align: left; 
+  border: 1px solid rgb(13, 13, 13, .1); /*inner hard-line white border*/
+  width:50px;
+  padding:3px; 
+  margin:2px; /*space*/
+  height:18px;
+  position: static;
+  top:0px;
+  left:0px;
+  margin-top:-9px;
+  float:left;
+  margin-right:-58px;
+  letter-spacing: 3px;
+}
+
+#back-button:hover {
+  font-size: 12px;
+  text-align: left; 
+  border: 1px solid white; /*inner hard-line white border*/
+  border-radius:10px;  /*round*/
+  width:50px;
+  padding:3px; 
+  box-shadow: 0 0 3px 2px gray inset, 0 0 2pt 1pt gray;  /*glow effect*/
+  background-color: #1c1c1c;  /*slight highlight*/
+  cursor:pointer; /*hover on desktop/mouse*/
+  margin:2px; /*space*/
+  height:18px;
+  position: static;
+  top:0px;
+  left:0px;
+  margin-top:-9px;
+  float:left;
+  margin-right:-58px;
+  letter-spacing: 3px;
+}
