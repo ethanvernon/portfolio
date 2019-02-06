@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import spell from "./spell-selector.png";
 
 export class Portfolio extends Component {
 	constructor(props) {
@@ -27,8 +28,14 @@ export class Portfolio extends Component {
 			<div id="portfolio" className={hidden} onClick={this.handleClick}>
 				<span>Portfolio</span>
 				{this.props.page==='portfolio' &&
-					<div className='center content'>
-						Coming soon...
+					<div className='frame'>
+						<span className='thumbnail-container'></span><img className='port-thumb' src={spell}/>
+						<div id='left-arrow' className='arrow'>
+							&#171;
+						</div>
+						<div id='right-arrow' className='arrow'>
+							&#187;
+						</div>
 					</div>
 				}
 			</div>

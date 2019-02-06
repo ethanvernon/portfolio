@@ -44,10 +44,9 @@ code {
 	background-color: rgb(13, 13, 13, .3); /*slight transparent inner*/
 	font-size: 20px;
 	letter-spacing: 4px; /*stretch out text*/
-	padding-top:10px;
-	padding-bottom:10px;
-	height:270px; /*set height for transitions*/
+	height:300px; /*set height for transitions*/
 	transition: height 250ms;
+	position:relative;
 }
 
 .center {
@@ -87,17 +86,18 @@ code {
 
 .fadeInOut {
     transition-duration: 800ms;
-    transition-property: height, opacity, visibility;
+    transition-property: height;
 }
 
 .fadeInOut.hidden {
     visibility: hidden;
     opacity: 0;
     transition-duration: 800ms;
-    transition-property: height, opacity, visibility;
+    transition-property: height;
     height: 0px;
 }
 
+/*anything contained in one of the pages*/
 .current {	
 	display: block; /*center align*/
 	flex-direction: row; /*center align*/
@@ -107,45 +107,82 @@ code {
 	transition-duration:800ms;
 }
 
+/*When button becomes title*/
 .content {
 	margin-top:5px;
 	font-size: 16px;
 }
 
 #back-button {
-  font-size: 12px;
-  text-align: left; 
+  font-size: 20px;
+  font-weight:bold;
   border: 1px solid rgb(13, 13, 13, .1); /*inner hard-line white border*/
-  width:50px;
-  padding:3px; 
-  margin:2px; /*space*/
-  height:18px;
-  position: static;
-  top:0px;
-  left:0px;
-  margin-top:-9px;
-  float:left;
-  margin-right:-58px;
-  letter-spacing: 3px;
+  width:40px;
+  padding-bottom:3px;
+  position: absolute; /*bottom of div*/
+  bottom:0px; /*bottom of div*/
+  left:0;
+  right: 0;
+  margin-left: calc(50% - 27px);
+}
+
+.x-padding {
+	width:43px;
 }
 
 #back-button:hover {
-  font-size: 12px;
-  text-align: left; 
+  font-size: 20px;
+  font-weight:bold;
   border: 1px solid white; /*inner hard-line white border*/
   border-radius:10px;  /*round*/
-  width:50px;
-  padding:3px; 
+  width:40px;
+  padding-bottom:3px;
   box-shadow: 0 0 3px 2px gray inset, 0 0 2pt 1pt gray;  /*glow effect*/
   background-color: #1c1c1c;  /*slight highlight*/
   cursor:pointer; /*hover on desktop/mouse*/
-  margin:2px; /*space*/
-  height:18px;
-  position: static;
-  top:0px;
-  left:0px;
-  margin-top:-9px;
-  float:left;
-  margin-right:-58px;
-  letter-spacing: 3px;
+  position: absolute; /*bottom of div*/
+  bottom:0px; /*bottom of div*/
+  left:0;
+  right: 0;
+}
+
+#left-arrow {
+    left:2px;
+}
+
+#right-arrow {
+    right:2px;
+}
+
+.arrow {
+    font-size: 30px;
+    position:absolute;
+    top:120px;
+}
+
+.arrow:hover {
+	cursor:pointer;
+}
+
+.frame {
+	height:240px;
+	white-space:nowrap;
+	text-align:center;
+	margin:.3em 0;
+}
+
+.thumbnail-container {
+	text-align: center;
+	display:inline-block;
+	height:100%;
+	vertical-align:middle;
+}
+
+.port-thumb {
+	border-radius:10px;
+	padding:2px;
+	border: 1px solid white;
+	vertical-align:middle;	
+	max-width:80%;
+	max-height:auto;
 }

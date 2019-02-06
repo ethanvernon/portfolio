@@ -13,8 +13,6 @@ export class Back extends Component {
 
 	render() {
 
-		let hidden;
-
 		/*
 		if (this.props.page === 'about me') {
 			hidden='fadeInOut current';
@@ -26,7 +24,7 @@ export class Back extends Component {
 
 		return (
 			<div id="back-button" className='' onClick={this.handleClick}>
-				<span className='center'>Back</span>
+				<span className='center x-padding'>X</span>
 			</div>
 		)
 	}

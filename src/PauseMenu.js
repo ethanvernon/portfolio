@@ -33,10 +33,6 @@ export class PauseMenu extends Component {
 			<div>
 				<Title/>
 				<div id='pause-menu' className={home}>
-					{this.state.page !== 'home' &&
-						<Back
-							handleClick={this.handleMenuClick}/>
-					}
 					<AboutMe
 						handleClick={this.handleMenuClick}
 						page={this.state.page}/>
@@ -52,6 +48,10 @@ export class PauseMenu extends Component {
 					<Blog
 						handleClick={this.handleMenuClick}
 						page={this.state.page}/>
+					{this.state.page !== 'home' &&
+						<Back
+							handleClick={this.handleMenuClick}/>
+					}
 				</div>
 			</div>
 		)
