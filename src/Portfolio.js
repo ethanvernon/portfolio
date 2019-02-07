@@ -34,8 +34,16 @@ export class Portfolio extends Component {
 			<div id="portfolio" className={hidden} onClick={this.handleClick}>
 				<span>Portfolio</span>
 				{this.props.page==='portfolio' &&
+				<div>
 					<div className='frame'>
 						<span className='thumbnail-container'></span><img className='port-thumb' src={this.props.thumb}/>
+
+						<div class="overlay">
+							<div class="text">JS, HTML, CSS, React, GIMP</div>
+						</div>
+					</div>
+
+
 						<div id='left-arrow' className='arrow' onClick={() => this.handleArrowClick('left')}>
 							&#171;
 						</div>
