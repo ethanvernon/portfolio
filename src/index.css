@@ -44,8 +44,8 @@ code {
 	background-color: rgb(13, 13, 13, .3); /*slight transparent inner*/
 	font-size: 20px;
 	letter-spacing: 4px; /*stretch out text*/
-	height:300px; /*set height for transitions*/
-	transition: height 250ms;
+	height:310px; /*set height for transitions*/
+	transition: height 0;
 	position:relative;
 }
 
@@ -55,7 +55,7 @@ code {
 	align-items: center; /*center align*/
 	justify-content: center; /*center align*/
 	transition-property:all;
-	transition-duration:800ms;
+	transition-duration:0;
 }
 
 /*CSS for current hover, abs useless on mobile*/
@@ -65,7 +65,8 @@ code {
 	width:90%;  /*for smaller screens*/
 	max-width:250px;  /*max to avoid ugly*/
 	padding:3px; 
-	padding-bottom:6px;
+	padding-top:6px;
+	padding-bottom:0px;
   box-shadow: 0 0 5px 4px gray inset, 0 0 3pt 2pt gray;  /*glow effect*/
   background-color: #1c1c1c;  /*slight highlight*/
   cursor:pointer; /*hover on desktop/mouse*/
@@ -77,22 +78,23 @@ code {
 .selector {
 	border: 1px solid rgb(13, 13, 13, .1); /*keeps div from stretching on hover*/
 	padding:3px; /*keeps div from stretching on hover*/
-	padding-bottom:6px; /*keeps div from stretching on hover*/
+	padding-bottom:0px; /*keeps div from stretching on hover*/
+	padding-top:6px;
   margin:8px; /*keeps div from stretching on hover*/
   height:38px;    
-  transition-duration: 800ms;
+  transition-duration: 0;
   transition-property: height, opacity, visibility;
 }
 
 .fadeInOut {
-    transition-duration: 800ms;
+    transition-duration: 0;
     transition-property: height;
 }
 
 .fadeInOut.hidden {
     visibility: hidden;
     opacity: 0;
-    transition-duration: 800ms;
+    transition-duration: 0;
     transition-property: height;
     height: 0px;
 }
@@ -104,7 +106,7 @@ code {
 	align-items: flex-start; /*vertical align*/
 	justify-content: center; /*hoirzontal align*/
 	transition-property: all;
-	transition-duration:800ms;
+	transition-duration:0;
 }
 
 /*When button becomes title*/
@@ -120,7 +122,7 @@ code {
   width:40px;
   padding-bottom:3px;
   position: absolute; /*bottom of div*/
-  bottom:0px; /*bottom of div*/
+  bottom:3px; /*bottom of div*/
   left:0;
   right: 0;
   margin-left: calc(50% - 27px);
@@ -141,7 +143,7 @@ code {
   background-color: #1c1c1c;  /*slight highlight*/
   cursor:pointer; /*hover on desktop/mouse*/
   position: absolute; /*bottom of div*/
-  bottom:0px; /*bottom of div*/
+  bottom:3px; /*bottom of div*/
   left:0;
   right: 0;
 }
